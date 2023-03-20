@@ -11,22 +11,22 @@ import React, {useRef} from 'react';
 import {Image} from 'react-native';
 import Video from 'react-native-video';
 import PipManager from '../components/PipManager';
-import {usePipModeListener} from '../../usePipModuleListener';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+// import {usePipModeListener} from '../../usePipModuleListener';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
 function VideoPlayer() {
-  const inPipMode = usePipModeListener();
+  //   const inPipMode = usePipModeListener();
   const videoRef = useRef(null);
   const handlePipButtonPress = () => {
     PipManager.enterPipMode();
   };
-  if (inPipMode) {
-    return (
-      <View>
-        <Text>PIP Mode</Text>
-      </View>
-    );
-  }
+  //   if (inPipMode) {
+  //     return (
+  //       <View>
+  //         <Text>PIP Mode</Text>
+  //       </View>
+  //     );
+  //   }
   return (
     <View>
       <Video
